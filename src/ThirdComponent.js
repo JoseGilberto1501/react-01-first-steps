@@ -1,5 +1,5 @@
 import React from 'react'
-import { ReactPropTypes } from 'react'
+import PropTypes from 'prop-types'
 
 export const ThirdComponent = ({name,lastName,medical_record}) => {   
 
@@ -16,4 +16,16 @@ export const ThirdComponent = ({name,lastName,medical_record}) => {
         </ul>
     </div>
   )
+}
+
+ThirdComponent.propTypes = {
+  name:PropTypes.string.isRequired,
+  lastName:PropTypes.string.isRequired,
+  medical_record: PropTypes.object
+}
+
+ThirdComponent.defaultProps = {
+  name:"Jose 2",
+  lastName:"Zuniga 2",
+  medical_record: PropTypes.object
 }

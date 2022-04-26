@@ -3,15 +3,15 @@ import "./App.css";
 import MyComponent from "./MyComponent";
 import { SecondComponet } from "./SecondComponet";
 import { ThirdComponent } from "./ThirdComponent";
+import { EventsComponet } from "./EventsComponet";
 
 function App() {
-
-  const medical_record ={
+  const medical_record = {
     height: "184cm",
     bloodType: "B+",
     status: "Well",
-    alergics: "none"
-  }
+    alergics: "none",
+  };
 
   return (
     <div className="App">
@@ -21,10 +21,13 @@ function App() {
 
         <div className="componets">
           <hr />
-          <ThirdComponent 
-              name = "jose" 
-              lastName = "Zuniga Vargas"
-              medical_record = {medical_record}/>
+          <EventsComponet />
+          <hr />
+          <ThirdComponent
+            name="Jose"
+            lastName="Zuniga Vargas"
+            medical_record={medical_record}
+          />
           <hr />
           <SecondComponet />
           <hr />
